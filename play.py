@@ -14,6 +14,7 @@ CLASS_REV_MAP = {
 def mapper(index):
     return CLASS_REV_MAP[index]
 
+# move1 = User, move2 = Computer
 def calculate_winner(move1, move2):
     if move1 == move2:
         return "Tie"
@@ -24,7 +25,7 @@ def calculate_winner(move1, move2):
             return "Computer"
     if move1 == "scissor":
         if move2 == "rock":
-            return "User"
+            return "Computer"
         if move2 == "paper":
             return "User"
     if move1 == "paper":
@@ -32,7 +33,7 @@ def calculate_winner(move1, move2):
             return "User"
         if move2 == "scissor":
             return "Computer"
-model = load_model("rock_paper_scissor.h5")
+model = load_model("rock_paper_scissor_old.h5")
 
 cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1900)

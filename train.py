@@ -62,7 +62,7 @@ model.compile(
 )
 
 #training the model
-model.fit(np.array(data), np.array(labels), epochs=8)
+model.fit(np.array(data), np.array(labels), epochs=10)
 
 #saving the model separately
-model.save("rock_paper_scissor.h5")
+model.save("rps_model.h5")
